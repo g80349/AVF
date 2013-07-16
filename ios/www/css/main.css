@@ -5,7 +5,34 @@ Project 1
 CSS Stylesheet
 */
 
-h2{
-	font-size: 15px;
-	font-weight: 100;
+#home{
+	/*background: -webkit-linear-gradient(#000000 0%, #d1cccc 74.17%);*/
+	background-image: url(../images/background.jpg);
+	background-size: 100% auto;
 }
+#homeAccordian{
+	width: 75%;
+	margin : 0px auto;
+	border-color: #bd1f1f;
+	border-width: 10px;
+}
+
+span.ui-btn-inner{
+	text-align: center;
+}
+a#nfl,#ncaaFootball,#mlb,#nba,#ncaaBasketball,#wnba,#wNcaaBasketball,#boxing,#nhl,#golf,#tennis,#soccer,#mma,#nascar.ui-link{
+	color: white;
+	text-decoration: none;
+	text-shadow: 5px 6px 7px #8b8585;
+}
+
+a.ui-link{
+	color:#e61212;
+	text-decoration: none;
+	text-shadow: 5px 6px 7px #414141;
+}
+
+
+
+
+
