@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <!--David Whimple-->
 <!--AVF 1307-->
-<!--Project 1-->
+<!--Project 2-->
 <!--Index-->
 <html>
 	<head>
 		<meta charset="utf-8"/>
-        <title>Calorie Counter</title>
+        <title>AVF App</title>
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,51 +17,77 @@
 	<body>
     	<section data-role="page" id="home" >
         	<header data-role="header" data-position="fixed">
-            	<h1>Calorie Counter</h1>
+            	<h1>AVF App</h1>
+        	</header>
+            <div data-role="content" id="homeContent">
+	          	<div data-role="collapsible-set" id="homeAccordian">
+				  	<div data-role="collapsible">
+				  		<h3>Instagram</h3>
+				  			<ul>
+				  				<li><a href="#instagram" id="instagramLink">Instagram</a></li>
+				  			</ul>
+				  	</div>
+				  	<div data-role="collapsible">
+				  		<h3>ESPN</h3>
+				  			<ul id="espnList">
+				  				<li><a href="#espn" id="nfl">NFL</a></li>
+				  				<li><a href="#espn" id="ncaaFootball">NCAA Football</a></li>
+				  				<li><a href="#espn" id="mlb">MLB</a></li>
+				  				<li><a href="#espn" id="nba">NBA</a></li>
+				  				<li><a href="#espn" id="ncaaBasketball">NCAA Men's Basketball</a></li>
+				  				<li><a href="#espn" id="wnba">WNBA</a></li>
+				  				<li><a href="#espn" id="wNcaaBasketball">Women's College Basketball</a></li>
+				  				<li><a href="#espn" id="boxing">Boxing</a></li>
+				  				<li><a href="#espn" id="nhl">NHL</a></li>
+				  				<li><a href="#espn" id="golf">Golf</a></li>
+				  				<li><a href="#espn" id="tennis">Tennis</a></li>
+				  				<li><a href="#espn" id="soccer">Soccer</a></li>
+				  				<li><a href="#espn" id="mma">MMA</a></li>
+				  				<li><a href="#espn" id="nascar">Nascar</a></li>
+				  			</ul>
+				  	</div>
+				  	<div data-role="collapsible">
+				  		<h3>Links to Github</h3>
+				  			<ul>
+				  				<li><a href="https://github.com/g80349/AVF/tree/master" id="masterLink">Master Github</a></li>
+				  				<li><a href="http://g80349.github.com/AVF/ios/www/index.html" id="iosLink">iOS Gh-Pages</a></li>
+				  				<li><a href="http://g80349.github.com/AVF/android/week1/assets/www/index.html" id="androidLink">Android Gh-pages</a></li>
+				  			</ul>
+				  	</div>
+	        	</div>
+	        	<div data-role="footer" data-position="fixed">
+	        		<h4>David Whimple AVF Term 1307</h4>
+	        	</div>
+			</div>
+      	</section>
+    	<section data-role="page" id="instagram" >
+        	<header data-role="header" data-position="fixed">
+            	<h1>AFV App</h1>
+            	<a href="#home" data-icon="back">Back</a>
         	</header>
             <div data-role="content">
-        		<h2>This app is going to be a continuance of a calorie counting app that I have worked on a little in the past classes. I am hoping to be able to introduce several api's and native features to make the app more usable and appealing.</h2>
+	  			<h2 id="instagramMessage">Please wait....</h2>
+	  			<div id="instagramOutput">
+	  			</div>
             </div>
-          	<div data-role="collapsible-set">
-			  	<div data-role="collapsible" data-collapsed="false">
-			  		<h3>Native iOS and Android</h3>
-			  			<ul>
-					  		<li><img src="images/camera.png" alt="Camera"><p>Camera</p></li>
-					  		<li><img src="images/storage.png" alt="Storage"><p>Storage</p></li>
-					  		<li><img src="images/notification.png" alt="Notifications"><p>Notifications</p></li>
-					  	</ul>
-			  	</div>
-			  	<div data-role="collapsible">
-			  		<h3>Data API's</h3>
-			  			<ul>
-			  				<li>Twitter</li>
-			  				<li>Facebook</li>
-			  				<li>Google Graphs</li>
-			  				<li>Food Nutrition/Barcode Scanner</li>
-			  			</ul>
-			  	</div>
-			  	<div data-role="collapsible">
-			  		<h3>Research</h3>
-				  		<ul>
-					  		<li><a href="https://dev.twitter.com">Twitter API</a></li>
-					  		<li><a href="https://developers.facebook.com/docs/reference/apis/">Facebook API</a></li>
-					  		<li><a href="http://code.google.com">Google Graphs API</a></li>
-					  		<li><a href="http://developer.esha.com/docs/read/Home">Food Nutrition/Barcode Scanner API</a></li>
-				  		</ul>
-			  	</div>
-			  	<div data-role="collapsible">
-			  		<h3>Links to Github</h3>
-			  			<ul>
-			  				<li><a href="https://github.com/g80349/AVF/tree/master">Master Github</a></li>
-			  				<li><a href="http://g80349.github.com/AVF/ios/www/index.html">iOS Gh-Pages</a></li>
-			  				<li><a href="http://g80349.github.com/AVF/android/week1/assets/www/index.html">Android Gh-pages</a></li>
-			  			</ul>
-			  	</div>
-        	</div>
         	<div data-role="footer" data-position="fixed">
         		<h4>David Whimple AVF Term 1307</h4>
         	</div>
-      	</section>
+    	</section>
+    	<section data-role="page" id="espn" >
+        	<header data-role="header" data-position="fixed">
+            	<h1>AFV App</h1>
+            	<a href="#home" data-icon="back">Back</a>
+        	</header>
+            <div data-role="content">
+	  			<h2 id="espnMessage">Please wait....</h2>
+	  			<div id="espnOutput">
+	  			</div>
+            </div>
+        	<div data-role="footer" data-position="fixed">
+        		<h4>David Whimple AVF Term 1307</h4>
+        	</div>
+    	</section>
 		<script src="js/libs/jquery-1.9.1.min.js"></script>
 		<script src="js/libs/jquery.mobile-1.3.1.min.js"></script>
 		<script src="js/main.js"></script>

@@ -23,11 +23,11 @@ $('document').ready(function(){
 		alert("It's working");
 		console.log(info);
 
-		$('#message').html("<h2>Instagram results:</h2>");
+		$('#instagramMessage').html("<h2>Instagram results:</h2>");
 
 		$.each(info.data, function(index, photo){
-			var pic = "<li class='images'><img src='" + photo.images.standard_resolution.url + "'alt='" + photo.user.id + "'/><h4>" + photo.user.full_name + ", <em>(" + photo.user.username + ")</h4></li>";
-			$('#output').append(pic);
+			var pic = "<div class='images'><img src='" + photo.images.standard_resolution.url + "'alt='" + photo.user.id + "'/><h4>" + photo.user.full_name + ", <em>(" + photo.user.username + ")</h4></div>";
+			$('#instagramOutput').append(pic);
 		});
 	};
 });
@@ -139,40 +139,13 @@ $('document').ready(function(){
 		$('#espnMessage').html("<h2>ESPN results:</h2>");
 
 		$.each(info.headlines, function(index, story){
-			var sportsStory = "<li><a href='" + story.links.web.href +"'><h2>" + story.headline + "</h2></a><h3>" + story.description + "</h3></li>";
+			var sportsStory = "<a href='" + story.links.web.href +"'><h2 class='h2'>" + story.headline + "</h2></a><p>" + story.description + "</p>";
 			console.log(sportsStory);
 			$('#espnOutput').append(sportsStory);
 		});
 	};
 });
 
-$('document').ready(function(){
-
-	$('#weatherLink').on('click', function(){
-		$('#weatherOutput').empty();
-		var tag = prompt("Search City or Zip Code", "89044");
-
-		if(tag !== null){
-			var url = "http://api.wunderground.com/api/0daa58d9b0337d04/geolookup/conditions/forecast/q/" + tag + ".json";
-			$.getJSON(url, screenOutput);
-			console.log(url);
-		}else{
-			window.location.reload('#home');
-		}
-	});
-
-	var screenOutput = function(info){
-		alert("It's working");
-		console.log(info);
-
-	var weather = info.current_observation;
-			console.log(weather);
-			var weatherReport = "<h2>" + weather.display_location.full + "</h2><h2>" + weather.display_location.zip + "</h2><img src='" + weather.image.url + "'><h3></h3></li>";
-			console.log(weatherReport);
-			$('#weatherOutput').append(weatherReport);
-		$('#weatherMessage').html("<h2>Weather Results:</h2>");
-	};
-});
 
 
 

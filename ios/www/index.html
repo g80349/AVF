@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--David Whimple-->
 <!--AVF 1307-->
-<!--Project 1-->
+<!--Project 2-->
 <!--Index-->
 <html>
 	<head>
@@ -19,52 +19,46 @@
         	<header data-role="header" data-position="fixed">
             	<h1>AVF App</h1>
         	</header>
-            <div data-role="content">
-            </div>
-          	<div data-role="collapsible-set" id="homeAccordian">
-			  	<div data-role="collapsible">
-			  		<h3>Instagram</h3>
-			  			<ul>
-			  				<li><a href="#instagram" id="instagramLink">Instagram</a></li>
-			  			</ul>
-			  	</div>
-			  	<div data-role="collapsible">
-			  		<h3>ESPN</h3>
-			  			<ul>
-			  				<li><a href="#espn" id="nfl">NFL</a></li>
-			  				<li><a href="#espn" id="ncaaFootball">NCAA Football</a></li>
-			  				<li><a href="#espn" id="mlb">MLB</a></li>
-			  				<li><a href="#espn" id="nba">NBA</a></li>
-			  				<li><a href="#espn" id="ncaaBasketball">NCAA Men's Basketball</a></li>
-			  				<li><a href="#espn" id="wnba">WNBA</a></li>
-			  				<li><a href="#espn" id="wNcaaBasketball">Women's College Basketball</a></li>
-			  				<li><a href="#espn" id="boxing">Boxing</a></li>
-			  				<li><a href="#espn" id="nhl">NHL</a></li>
-			  				<li><a href="#espn" id="golf">Golf</a></li>
-			  				<li><a href="#espn" id="tennis">Tennis</a></li>
-			  				<li><a href="#espn" id="soccer">Soccer</a></li>
-			  				<li><a href="#espn" id="mma">MMA</a></li>
-			  				<li><a href="#espn" id="nascar">Nascar</a></li>
-			  			</ul>
-			  	</div>
-			  	<div data-role="collapsible">
-			  		<h3>Weather</h3>
-			  			<ul>
-			  				<li><a href="#weather" id="weatherLink">Weather</a></li>
-			  			</ul>
-			  	</div>
-			  	<div data-role="collapsible">
-			  		<h3>Links to Github</h3>
-			  			<ul>
-			  				<li><a href="https://github.com/g80349/AVF/tree/master">Master Github</a></li>
-			  				<li><a href="http://g80349.github.com/AVF/ios/www/index.html ">iOS Gh-Pages</a></li>
-			  				<li><a href="http://g80349.github.com/AVF/android/week1/assets/www/index.html ">Android Gh-pages</a></li>
-			  			</ul>
-			  	</div>
-        	</div>
-        	<div data-role="footer" data-position="fixed">
-        		<h4>David Whimple AVF Term 1307</h4>
-        	</div>
+            <div data-role="content" id="homeContent">
+	          	<div data-role="collapsible-set" id="homeAccordian">
+				  	<div data-role="collapsible">
+				  		<h3>Instagram</h3>
+				  			<ul>
+				  				<li><a href="#instagram" id="instagramLink">Instagram</a></li>
+				  			</ul>
+				  	</div>
+				  	<div data-role="collapsible">
+				  		<h3>ESPN</h3>
+				  			<ul id="espnList">
+				  				<li><a href="#espn" id="nfl">NFL</a></li>
+				  				<li><a href="#espn" id="ncaaFootball">NCAA Football</a></li>
+				  				<li><a href="#espn" id="mlb">MLB</a></li>
+				  				<li><a href="#espn" id="nba">NBA</a></li>
+				  				<li><a href="#espn" id="ncaaBasketball">NCAA Men's Basketball</a></li>
+				  				<li><a href="#espn" id="wnba">WNBA</a></li>
+				  				<li><a href="#espn" id="wNcaaBasketball">Women's College Basketball</a></li>
+				  				<li><a href="#espn" id="boxing">Boxing</a></li>
+				  				<li><a href="#espn" id="nhl">NHL</a></li>
+				  				<li><a href="#espn" id="golf">Golf</a></li>
+				  				<li><a href="#espn" id="tennis">Tennis</a></li>
+				  				<li><a href="#espn" id="soccer">Soccer</a></li>
+				  				<li><a href="#espn" id="mma">MMA</a></li>
+				  				<li><a href="#espn" id="nascar">Nascar</a></li>
+				  			</ul>
+				  	</div>
+				  	<div data-role="collapsible">
+				  		<h3>Links to Github</h3>
+				  			<ul>
+				  				<li><a href="https://github.com/g80349/AVF/tree/master" id="masterLink">Master Github</a></li>
+				  				<li><a href="http://g80349.github.com/AVF/ios/www/index.html" id="iosLink">iOS Gh-Pages</a></li>
+				  				<li><a href="http://g80349.github.com/AVF/android/week1/assets/www/index.html" id="androidLink">Android Gh-pages</a></li>
+				  			</ul>
+				  	</div>
+	        	</div>
+	        	<div data-role="footer" data-position="fixed">
+	        		<h4>David Whimple AVF Term 1307</h4>
+	        	</div>
+			</div>
       	</section>
     	<section data-role="page" id="instagram" >
         	<header data-role="header" data-position="fixed">
@@ -72,11 +66,9 @@
             	<a href="#home" data-icon="back">Back</a>
         	</header>
             <div data-role="content">
-	  			<ul>
-	  				<li id="message"><h2>Please wait....</h2></li>
-	  			</ul>
-	  			<ul id="output">
-	  			</ul>
+	  			<h2 id="instagramMessage">Please wait....</h2>
+	  			<div id="instagramOutput">
+	  			</div>
             </div>
         	<div data-role="footer" data-position="fixed">
         		<h4>David Whimple AVF Term 1307</h4>
@@ -88,27 +80,9 @@
             	<a href="#home" data-icon="back">Back</a>
         	</header>
             <div data-role="content">
-	  			<ul>
-	  				<li id="espnMessage"><h2>Please wait....</h2></li>
-	  			</ul>
-	  			<ul id="espnOutput">
-	  			</ul>
-            </div>
-        	<div data-role="footer" data-position="fixed">
-        		<h4>David Whimple AVF Term 1307</h4>
-        	</div>
-    	</section>
-    	<section data-role="page" id="weather" >
-        	<header data-role="header" data-position="fixed">
-            	<h1>AFV App</h1>
-            	<a href="#home" data-icon="back">Back</a>
-        	</header>
-            <div data-role="content">
-	  			<ul>
-	  				<li id="weatherMessage"><h2>Please wait....</h2></li>
-	  			</ul>
-	  			<ul id="weatherOutput">
-	  			</ul>
+	  			<h2 id="espnMessage">Please wait....</h2>
+	  			<div id="espnOutput">
+	  			</div>
             </div>
         	<div data-role="footer" data-position="fixed">
         		<h4>David Whimple AVF Term 1307</h4>
