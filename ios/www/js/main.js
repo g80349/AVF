@@ -11,7 +11,7 @@ $('document').ready(function(){
 		var tag = prompt("What would you like to search for? Please use one word tags.", "Resturant");
 
 		if(tag !== null){
-			var url = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?client_id=7c2149de6f6a4ee0a7c76cacf1d87e0b";
+			var url = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?client_id=7c2149de6f6a4ee0a7c76cacf1d87e0b&callback=?";
 			$.getJSON(url, screenOutput);
 			console.log(url);
 		}else{
@@ -127,7 +127,7 @@ $('document').ready(function(){
 
 	$('#nascar').on('click', function(){
 		$('#espnOutput').empty();
-			var url = "http://api.espn.com/v1/sports/racing/nascar/news/headlines?apikey=sf3c427x778ndub5e8v5tgnm&callback=?";
+			var url = "http://api.espn.com/v1/sports/racing/nascar/news/headlines?apikey=sf3c427x778ndub5e8v5tgnm";
 			$.getJSON(url, screenOutput);
 			console.log(url);
 	});
