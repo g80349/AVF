@@ -26,7 +26,7 @@ $('document').ready(function(){
 		$('#instagramMessage').html("<h2>Instagram results:</h2>");
 
 		$.each(info.data, function(index, photo){
-			var pic = "<div class='images'><img src='" + photo.images.standard_resolution.url + "'alt='" + photo.user.id + "'/><h4>" + photo.user.full_name + ",<em>(" + photo.user.username + ")</h4></div>";
+			var pic = "<div class='images'><img src='" + photo.images.standard_resolution.url + "'alt='" + photo.user.id + "'/><h4 class='subtext'>" + photo.user.full_name + ",<em>(" + photo.user.username + ")</h4></div>";
 			$('#instagramOutput').append(pic);
 		});
 	};

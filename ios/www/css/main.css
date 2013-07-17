@@ -11,7 +11,10 @@ html *{
 }
 h1,h4{
 	color: #8dcc40;
+	text-align: center;
 	text-shadow: none;
+}
+h4.subtext{
 	word-wrap: break-word;
 	max-width: 225px;
 }
