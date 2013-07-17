@@ -26,7 +26,7 @@ $('document').ready(function(){
 		$('#instagramMessage').html("<h2>Instagram results:</h2>");
 
 		$.each(info.data, function(index, photo){
-			var pic = "<div class='images'><img src='" + photo.images.standard_resolution.url + "'alt='" + photo.user.id + "'/><h4>" + photo.user.full_name + ", <em>(" + photo.user.username + ")</h4></div>";
+			var pic = "<div class='images'><img src='" + photo.images.standard_resolution.url + "'alt='" + photo.user.id + "'/><h4>" + photo.user.full_name + ",<em>(" + photo.user.username + ")</h4></div>";
 			$('#instagramOutput').append(pic);
 		});
 	};
@@ -139,14 +139,12 @@ $('document').ready(function(){
 		$('#espnMessage').html("<h2>ESPN results:</h2>");
 
 		$.each(info.headlines, function(index, story){
-			var sportsStory = "<a href='" + story.links.web.href +"'><h2 class='h2'>" + story.headline + "</h2></a><p>" + story.description + "</p>";
+			var sportsStory = "<div class='article'><a href='" + story.links.web.href +"'><h2 class='h2'>" + story.headline + "</h2></a><p>" + story.description + "</p></div>";
 			console.log(sportsStory);
 			$('#espnOutput').append(sportsStory);
 		});
 	};
 });
-
-
 
 
 

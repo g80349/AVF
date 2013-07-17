@@ -12,23 +12,22 @@ html *{
 h1,h4{
 	color: #8dcc40;
 	text-shadow: none;
+	word-wrap: break-word;
+	max-width: 225px;
 }
 h2.h2{
 	font-size: 20px;
 	text-shadow: 0px 7px 10px #000000;
-    text-align: center;
 }
 a{
 	color: #8dcc40;
 	font-size: 14px;
 	text-decoration: none;
 	text-shadow: 0px 7px 10px #000000;
-        filter: dropshadow(color=#000000, offx=0, offy=7);
 }
 p{
 	color: white;
 	text-shadow: none;
-	padding-bottom: 30px;
 }
 #home,#instagram,#espn {
 	background-image: url(../images/background.jpg);
@@ -40,6 +39,7 @@ p{
 	margin: 0px auto;
 	border-color: #bd1f1f;
 	border-width: 10px;
+	opacity: .85;
 }
 
 span.ui-btn-inner{
@@ -47,18 +47,16 @@ span.ui-btn-inner{
 }
 span.ui-btn-text{
 	padding-right: 25px;
-
+	color: #8dcc40;
 }
 #nfl,#ncaaFootball,#mlb,#nba,#ncaaBasketball,#wnba,#wNcaaBasketball,#boxing,#nhl,#golf,#tennis,#soccer,#mma,#nascar,#instagramLink,#weatherLink,#masterLink,#iosLink,#androidLink.ui-link{
 	color: #8dcc40;
 	font-size: 14px;
 	text-decoration: none;
 	text-shadow: 0px 7px 10px #000000;
-        filter: dropshadow(color=#000000, offx=0, offy=7);
 }
 
 ul{
-	text-align: center;
 	padding-right: 50px;
 	list-style-position: inside;
 	color: white;
@@ -72,17 +70,28 @@ li{
 	text-shadow: none;
 }
 img{
-	width: 250px;
+	width: 225px;
 	-moz-box-shadow: 10px 10px 20px #000;
 	-webkit-box-shadow: 10px 10px 20px #000;
 	box-shadow: 10px 10px 20px #000;
+	border-radius: 15px;
 }
 div.images{
 	float: left;
 	display: inline;
 	text-align: center;
-	font-size: 10px;
-	padding: 20px 20px 20px 20px;
+	font-size: 13px;
+	padding: 15px 20px 15px 20px;
+	margin: 8px;
+	background: rgba(73, 73, 73, 0.5);
+	border-radius: 15px;
+	height: 280px;
+}
+div.article{
+	border-radius: 15px;
+	margin: 15px;
+	padding: 5px 10px 5px 10px;
+	background: rgba(73, 73, 73, 0.3);
 }
 
 
