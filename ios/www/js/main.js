@@ -8,7 +8,7 @@ $('document').ready(function(){
 
 	$('#instagramLink').on('click', function(){
 		$('#output').empty();
-		var tag = prompt("What would you like to search for? Please use one word tags.", "Resturant");
+		var tag = prompt("What would you like to search for? Please use one word tags.", "Restaurant");
 
 		if(tag !== null){
 			var url = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?client_id=7c2149de6f6a4ee0a7c76cacf1d87e0b&callback=?";

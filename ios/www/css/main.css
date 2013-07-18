@@ -5,97 +5,235 @@ Project 2
 CSS Stylesheet
 */
 
+@media screen and (orientation:portrait)
+{
+	html *{
+		font-family: serif;
+	}
+	h1,h4{
+		color: #8dcc40;
+		text-align: center;
+		text-shadow: none;
+	}
+	h4.subtext{
+		word-wrap: break-word;
+		max-width: 190px;
+	}
+	h2.h2{
+		font-size: 20px;
+		text-shadow: 0px 7px 10px #000000;
+	}
+	a{
+		color: #8dcc40;
+		font-size: 14px;
+		text-decoration: none;
+		text-shadow: 0px 7px 10px #000000;
+	}
+	p{
+		color: white;
+		text-shadow: none;
+	}
+	#home,#instagram,#espn {
+		background-image: url(../images/background.jpg);
+		background-position: center center;
+		background-size: 100% auto;
+	}
+	#homeAccordian{
+		width: 60%;
+		margin: 0px auto;
+		margin-top: 300px;
+		opacity: .85;
+	}
+	span.ui-btn-inner{
+		text-align: center;
+	}
+	span.ui-btn-text{
+		font-size: 18px;
+		padding-right: 25px;
+		color: #8dcc40;
+	}
+	#nfl,#ncaaFootball,#mlb,#nba,#ncaaBasketball,#wnba,#wNcaaBasketball,#boxing,#nhl,#golf,#tennis,#soccer,#mma,#nascar.ui-link{
+		color: #8dcc40;
+		font-size: 16px;
+		text-decoration: none;
+		text-shadow: 0px 7px 10px #000000;
+	}
+	#instagramLink,#masterLink,#iosLink,#androidLink,#native,#research,a.links.ui-link{
+		color: #8dcc40;
+		font-size: 16px;
+		text-align: center;
+		padding-right: 33px;
+		text-decoration: none;
+		text-shadow: 0px 7px 10px #000000;
 
-html *{
-	font-family: serif;
-}
-h1,h4{
-	color: #8dcc40;
-	text-align: center;
-	text-shadow: none;
-}
-h4.subtext{
-	word-wrap: break-word;
-	max-width: 225px;
-}
-h2.h2{
-	font-size: 20px;
-	text-shadow: 0px 7px 10px #000000;
-}
-a{
-	color: #8dcc40;
-	font-size: 14px;
-	text-decoration: none;
-	text-shadow: 0px 7px 10px #000000;
-}
-p{
-	color: white;
-	text-shadow: none;
-}
-#home,#instagram,#espn {
-	background-image: url(../images/background.jpg);
-	background-position: center center;
-	background-size: 100% auto;
-}
-#homeAccordian{
-	width: 60%;
-	margin: 0px auto;
-	border-color: #bd1f1f;
-	border-width: 10px;
-	opacity: .85;
-}
-
-span.ui-btn-inner{
-	text-align: center;
-}
-span.ui-btn-text{
-	padding-right: 25px;
-	color: #8dcc40;
-}
-#nfl,#ncaaFootball,#mlb,#nba,#ncaaBasketball,#wnba,#wNcaaBasketball,#boxing,#nhl,#golf,#tennis,#soccer,#mma,#nascar,#instagramLink,#weatherLink,#masterLink,#iosLink,#androidLink.ui-link{
-	color: #8dcc40;
-	font-size: 14px;
-	text-decoration: none;
-	text-shadow: 0px 7px 10px #000000;
+	}
+	ul{
+		margin: 0px auto;
+		list-style: none;
+		color: white;
+		text-align: center;
+	}
+	td{
+		width: 175px;
+		margin: 10px 0px 10px 10px;
+		margin-left: 20px;
+		margin-right: 5px;
+		display: inline-block;
+		color: white;
+	}
+	li{
+		padding-top: 15px;
+	}
+	#instagramMessage,#espnMessage{
+		color: #ececec;
+		font-size: 16px;
+		text-shadow: none;
+	}
+	img{
+		width: 190px;
+		-moz-box-shadow: 10px 10px 20px #000;
+		-webkit-box-shadow: 10px 10px 20px #000;
+		box-shadow: 10px 10px 20px #000;
+		border-radius: 15px;
+	}
+	div.images{
+		float: left;
+		display: inline;
+		text-align: center;
+		font-size: 13px;
+		padding: 15px 20px 15px 20px;
+		margin: 8px;
+		background: rgba(73, 73, 73, 0.5);
+		border-radius: 15px;
+		height: 260px;
+	}
+	div.article{
+		width: 70%;
+		border-radius: 15px;
+		margin: 0px auto;
+		margin-bottom: 15px;
+		padding: 5px 10px 5px 10px;
+		background: rgba(73, 73, 73, 0.3);
+	}
 }
 
-ul{
-	padding-right: 50px;
-	list-style-position: inside;
-	color: white;
+
+
+
+
+@media screen and (orientation:landscape)
+{
+	html *{
+		font-family: serif;
+	}
+	h1,h4{
+		color: #8dcc40;
+		text-align: center;
+		text-shadow: none;
+	}
+	h4.subtext{
+		word-wrap: break-word;
+		max-width: 192px;
+	}
+	h2.h2{
+		font-size: 20px;
+		text-shadow: 0px 7px 10px #000000;
+	}
+	a{
+		color: #8dcc40;
+		font-size: 14px;
+		text-decoration: none;
+		text-shadow: 0px 7px 10px #000000;
+	}
+	p{
+		color: white;
+		text-shadow: none;
+	}
+	#home,#instagram,#espn {
+		background-image: url(../images/background.jpg);
+		background-position: center center;
+		background-size: 100% auto;
+	}
+	#homeAccordian{
+		width: 60%;
+		margin: 0px auto;
+		margin-top: 100px;
+		opacity: .85;
+	}
+	span.ui-btn-inner{
+		text-align: center;
+	}
+	span.ui-btn-text{
+		padding-right: 25px;
+		color: #8dcc40;
+		font-size: 18px;
+	}
+	#nfl,#ncaaFootball,#mlb,#nba,#ncaaBasketball,#wnba,#wNcaaBasketball,#boxing,#nhl,#golf,#tennis,#soccer,#mma,#nascar.ui-link{
+		color: #8dcc40;
+		font-size: 16px;
+		text-decoration: none;
+		text-shadow: 0px 7px 10px #000000;
+	}
+	#instagramLink,#masterLink,#iosLink,#androidLink,#native,#research,a.links.ui-link{
+		color: #8dcc40;
+		font-size: 16px;
+		text-align: center;
+		padding-right: 33px;
+		text-decoration: none;
+		text-shadow: 0px 7px 10px #000000;
+
+	}
+	ul{
+		list-style: none;
+		color: white;
+		text-align: center;
+		margin: 0px auto;
+	}
+	li{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	td{
+		width: 175px;
+		margin: 10px 30px 10px 70px;
+		display: inline-block;
+		color: white;
+	}
+	#instagramMessage,#espnMessage{
+		color: #ececec;
+		font-size: 16px;
+		text-shadow: none;
+	}
+	img{
+		width: 192px;
+		-moz-box-shadow: 10px 10px 20px #000;
+		-webkit-box-shadow: 10px 10px 20px #000;
+		box-shadow: 10px 10px 20px #000;
+		border-radius: 15px;
+	}
+	div.images{
+		float: left;
+		display: inline;
+		text-align: center;
+		font-size: 13px;
+		padding: 15px 20px 15px 20px;
+		margin: 8px;
+		background: rgba(73, 73, 73, 0.5);
+		border-radius: 15px;
+		height: 260px;
+	}
+	div.article{
+		width: 70%;
+		border-radius: 15px;
+		margin: 0px auto;
+		margin-bottom: 15px;
+		padding: 5px 10px 5px 10px;
+		background: rgba(73, 73, 73, 0.3);
+	}
 }
-li{
-	padding-top: 15px;
-}
-#instagramMessage,#espnMessage{
-	color: #ececec;
-	font-size: 16px;
-	text-shadow: none;
-}
-img{
-	width: 225px;
-	-moz-box-shadow: 10px 10px 20px #000;
-	-webkit-box-shadow: 10px 10px 20px #000;
-	box-shadow: 10px 10px 20px #000;
-	border-radius: 15px;
-}
-div.images{
-	float: left;
-	display: inline;
-	text-align: center;
-	font-size: 13px;
-	padding: 15px 20px 15px 20px;
-	margin: 8px;
-	background: rgba(73, 73, 73, 0.5);
-	border-radius: 15px;
-	height: 280px;
-}
-div.article{
-	border-radius: 15px;
-	margin: 15px;
-	padding: 5px 10px 5px 10px;
-	background: rgba(73, 73, 73, 0.3);
-}
+
+
+
 
 
 
