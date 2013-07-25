@@ -33,7 +33,7 @@ CSS Stylesheet
 		color: white;
 		text-shadow: none;
 	}
-	#home,#instagram,#espn {
+	#home,#instagram,#espn,#compass,#geolocation {
 		background-image: url(../images/background.jpg);
 		background-position: center center;
 		background-size: 100% auto;
@@ -67,6 +67,15 @@ CSS Stylesheet
 		text-shadow: 0px 7px 10px #000000;
 
 	}
+	#compassLink,#connection,#camera,#accelerometer{
+		color: #8dcc40;
+		margin: 0px auto;
+		padding-right: 0px;
+		font-size: 16px;
+		text-align: center;
+		text-decoration: none;
+		text-shadow: 0px 7px 10px #000000;
+	}
 	ul{
 		margin: 0px auto;
 		list-style: none;
@@ -84,7 +93,7 @@ CSS Stylesheet
 	li{
 		padding-top: 15px;
 	}
-	#instagramMessage,#espnMessage{
+	#instagramMessage,#espnMessage,#compassMessage{
 		color: #ececec;
 		font-size: 16px;
 		text-shadow: none;
@@ -149,7 +158,7 @@ CSS Stylesheet
 		color: white;
 		text-shadow: none;
 	}
-	#home,#instagram,#espn {
+	#home,#instagram,#espn,#compass,#geolocation {
 		background-image: url(../images/background.jpg);
 		background-position: center center;
 		background-size: 100% auto;
@@ -168,7 +177,7 @@ CSS Stylesheet
 		color: #8dcc40;
 		font-size: 18px;
 	}
-	#nfl,#ncaaFootball,#mlb,#nba,#ncaaBasketball,#wnba,#wNcaaBasketball,#boxing,#nhl,#golf,#tennis,#soccer,#mma,#nascar.ui-link{
+	#nfl,#ncaaFootball,#mlb,#nba,#ncaaBasketball,#wnba,#wNcaaBasketball,#boxing,#nhl,#golf,#tennis,#soccer,#mma,#nascar{
 		color: #8dcc40;
 		font-size: 16px;
 		text-decoration: none;
@@ -182,6 +191,15 @@ CSS Stylesheet
 		text-decoration: none;
 		text-shadow: 0px 7px 10px #000000;
 
+	}
+	#compassLink,#connection,#camera,#accelerometer{
+		color: #8dcc40;
+		margin: 0px auto;
+		padding-right: 0px;
+		font-size: 16px;
+		text-align: center;
+		text-decoration: none;
+		text-shadow: 0px 7px 10px #000000;
 	}
 	ul{
 		list-style: none;
@@ -199,10 +217,13 @@ CSS Stylesheet
 		display: inline-block;
 		color: white;
 	}
-	#instagramMessage,#espnMessage{
+	#instagramMessage,#espnMessage,#compassMessage{
 		color: #ececec;
 		font-size: 16px;
 		text-shadow: none;
+	}
+	#direction{
+		text-align: center;
 	}
 	img{
 		width: 192px;
