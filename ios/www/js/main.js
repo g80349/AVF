@@ -175,16 +175,18 @@ var watchID = null;
     $('#start').on('click', function(){
 	        var options = { frequency: 3000 };
 	        watchID = navigator.compass.watchHeading(onCompSuccess, onCompError, options);
+	        $('#compassMessage').html("Please wait...");
 	    });
     $('#stop').on('click', function(){
         if (watchID) {
             navigator.compass.clearWatch(watchID);
             watchID = null;
+            $('#compassMessage').html("Press start for compass heading.");
         }
     });
 
     function onCompSuccess(heading) {
-        $('#direction').html('Heading: ' + heading.magneticHeading);
+        $('#compassMessage').html('Heading: ' + heading.magneticHeading);
     }
     function onCompError() {
         alert('compError!');

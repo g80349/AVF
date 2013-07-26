@@ -18,13 +18,13 @@
 	<body>
     	<section data-role="page" id="home" >
         	<header data-role="header" data-position="fixed">
-            	<h1>AVF App</h1>
+            	<h1>AVF          App</h1>
         	</header>
             <div data-role="content" id="homeContent">
 	          	<div data-role="collapsible-set" id="homeAccordian">
 				  	<div data-role="collapsible">
 				  		<h3>Native Features</h3>
-				  			<ul id="native">
+				  			<ul>
 				  				<li><a href="#compass" id="compassLink">Compass</a></li>
 				  				<li><a href="#" id="connection">Check Connection</a></li>
 				  				<li><a href="#" id="camera">Camera</a></li>
@@ -59,6 +59,13 @@
 					  				<td><a href="#espn" id="nascar">Nascar</a></td>
 				  				</tr>
 				  			</table>
+				  	</div>
+				  	<div data-role="collapsible">
+				  		<h3>Discussions</h3>
+				  			<ul>
+				  				<li><a href="http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&amp;activityid=1192013&amp;deliveryId=2344418&accountId=136083" class="links">Week 1</a></li>
+				  				<li><a href="http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&activityid=1192019&amp;deliveryId=2344424&amp;accountId=136083" class="links">Week 2</a></li>
+				  			</ul>
 				  	</div>
 				  	<div data-role="collapsible">
 				  		<h3>Research</h3>
@@ -117,15 +124,14 @@
         		<h4>David Whimple AVF Term 1307</h4>
         	</div>
     	</section>
-    	<section data-role="page" id="compass">
+    	<section data-role="page" id="compass" >
         	<header data-role="header" data-position="fixed">
             	<h1>AFV App</h1>
             	<a href="#home" data-icon="back">Back</a>
         	</header>
             <div data-role="content">
-	  			<h2 id="compassMessage">Please wait....</h2>
-	  			<div id="compassOutput">
-	  				<p id="direction"></p>
+	  			<h2 id="compassMessage">Press start for compass heading.</h2>
+	  			<div>
 	  				<button id="start">Start</button>
 	  				<button id="stop">Stop</button>
 	  			</div>

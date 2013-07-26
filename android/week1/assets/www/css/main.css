@@ -1,7 +1,7 @@
 /*
 David Whimple
 AVF 1307
-Project 2
+Project 3
 CSS Stylesheet
 */
 
@@ -9,6 +9,14 @@ CSS Stylesheet
 {
 	html *{
 		font-family: serif;
+	}
+	header.ui-header.ui-bar-a.ui-header-fixed.slidedown{
+		height: 85px;
+		background-image: url(../images/android.jpg);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-color: black;
+		background-size: 10% auto;
 	}
 	h1,h4{
 		color: #8dcc40;
@@ -51,13 +59,13 @@ CSS Stylesheet
 		padding-right: 25px;
 		color: #8dcc40;
 	}
-	#nfl,#ncaaFootball,#mlb,#nba,#ncaaBasketball,#wnba,#wNcaaBasketball,#boxing,#nhl,#golf,#tennis,#soccer,#mma,#nascar.ui-link{
+	#nfl,#ncaaFootball,#mlb,#nba,#ncaaBasketball,#wnba,#wNcaaBasketball,#boxing,#nhl,#golf,#tennis,#soccer,#mma,#nascar{
 		color: #8dcc40;
 		font-size: 12px;
 		text-decoration: none;
 		text-shadow: 0px 7px 10px #000000;
 	}
-	#instagramLink,#masterLink,#iosLink,#androidLink,#native,#research,a.links.ui-link{
+	#instagramLink,#masterLink,#iosLink,#androidLink,#native,#research,a.links.ui-link,#compassLink,#camera,#accelerometer,#connection{
 		color: #8dcc40;
 		margin: 0px auto;
 		padding-right: 35px;
@@ -67,14 +75,6 @@ CSS Stylesheet
 		text-shadow: 0px 7px 10px #000000;
 
 	}
-	#compassLink,#connection,#camera,#accelerometer{
-		color: #8dcc40;
-		margin: 0px auto;
-		padding-right: 0px;
-		font-size: 12px;
-		text-align: center;
-		text-decoration: none;
-		text-shadow: 0px 7px 10px #000000;
 	ul{
 		margin: 0px auto;
 		list-style: none;
@@ -176,19 +176,10 @@ CSS Stylesheet
 		text-decoration: none;
 		text-shadow: 0px 7px 10px #000000;
 	}
-	#instagramLink,#masterLink,#iosLink,#androidLink,#native,#research,a.links.ui-link{
+	#instagramLink,#masterLink,#iosLink,#androidLink,#native,#research,a.links.ui-link,#compassLink,#camera,#accelerometer,#connection{
 		color: #8dcc40;
 		margin: 0px auto;
 		padding-right: 35px;
-		font-size: 12px;
-		text-align: center;
-		text-decoration: none;
-		text-shadow: 0px 7px 10px #000000;
-	}
-	#compassLink,#connection,#camera,#accelerometer{
-		color: #8dcc40;
-		margin: 0px auto;
-		padding-right: 0px;
 		font-size: 12px;
 		text-align: center;
 		text-decoration: none;

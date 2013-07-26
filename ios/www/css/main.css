@@ -10,6 +10,15 @@ CSS Stylesheet
 	html *{
 		font-family: serif;
 	}
+	header.ui-header.ui-bar-a.ui-header-fixed.slidedown{
+		height: 125px;
+		background-image: url(../images/apple2.jpg);
+		background-position-y: center;
+		background-position-x: 48%;
+		background-repeat: no-repeat;
+		background-color: black;
+		background-size: 25% auto;
+	}
 	h1,h4{
 		color: #8dcc40;
 		text-align: center;
@@ -41,7 +50,7 @@ CSS Stylesheet
 	#homeAccordian{
 		width: 60%;
 		margin: 0px auto;
-		margin-top: 300px;
+		margin-top: 100px;
 		opacity: .85;
 	}
 	span.ui-btn-inner{
@@ -58,7 +67,7 @@ CSS Stylesheet
 		text-decoration: none;
 		text-shadow: 0px 7px 10px #000000;
 	}
-	#instagramLink,#masterLink,#iosLink,#androidLink,#native,#research,a.links.ui-link{
+	#instagramLink,#masterLink,#iosLink,#androidLink,#native,#research,a.links.ui-link,#compassLink,#camera,#accelerometer,#connection{
 		color: #8dcc40;
 		font-size: 16px;
 		text-align: center;
@@ -66,15 +75,6 @@ CSS Stylesheet
 		text-decoration: none;
 		text-shadow: 0px 7px 10px #000000;
 
-	}
-	#compassLink,#connection,#camera,#accelerometer{
-		color: #8dcc40;
-		margin: 0px auto;
-		padding-right: 0px;
-		font-size: 16px;
-		text-align: center;
-		text-decoration: none;
-		text-shadow: 0px 7px 10px #000000;
 	}
 	ul{
 		margin: 0px auto;
@@ -183,7 +183,7 @@ CSS Stylesheet
 		text-decoration: none;
 		text-shadow: 0px 7px 10px #000000;
 	}
-	#instagramLink,#masterLink,#iosLink,#androidLink,#native,#research,a.links.ui-link{
+	#instagramLink,#masterLink,#iosLink,#androidLink,#native,#research,a.links.ui-link,#compassLink,#camera,#accelerometer,#connection{
 		color: #8dcc40;
 		font-size: 16px;
 		text-align: center;
@@ -191,15 +191,6 @@ CSS Stylesheet
 		text-decoration: none;
 		text-shadow: 0px 7px 10px #000000;
 
-	}
-	#compassLink,#connection,#camera,#accelerometer{
-		color: #8dcc40;
-		margin: 0px auto;
-		padding-right: 0px;
-		font-size: 16px;
-		text-align: center;
-		text-decoration: none;
-		text-shadow: 0px 7px 10px #000000;
 	}
 	ul{
 		list-style: none;
