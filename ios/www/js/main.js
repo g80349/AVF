@@ -1,36 +1,33 @@
 //David Whimple
 //AVF 1307
-//Project 3
+//Project 4
 //Javascript
 
+document.addEventListener("deviceready", onDeviceReady, false);
 
-$('document').ready(function(){
+function onDeviceReady() {
+
 
 	$('#instagramLink').on('click', function(){
-		$('#output').empty();
+		$('#instagramOutput').empty();
+	    navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
 
-		document.addEventListener("deviceready", onDeviceReady, false);
+	    function onGeoSuccess(position) {
+			var latitude  = position.coords.latitude;
+			var longitude = position.coords.longitude;
 
-		    function onDeviceReady() {
-		        navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
+			var url = "https://api.instagram.com/v1/media/search?lat=" + latitude + "&lng=" + longitude + "&client_id=7c2149de6f6a4ee0a7c76cacf1d87e0b&callback=?";
+			$.getJSON(url, geoOutput);
+	    }
+
+	    function onGeoError(error) {
+	    	if (error.code == 3){
+		        alert('code: '    + error.code    + '\n' +
+		              'message: ' + error.message + '\n' +
+		              'Please turn on your GPS.');
+		              parent.history.back();
 		    }
-
-		    function onGeoSuccess(position) {
-				var latitude  = position.coords.latitude;
-				var longitude = position.coords.longitude;
-
-				var url = "https://api.instagram.com/v1/media/search?lat=" + latitude + "&lng=" + longitude + "&client_id=7c2149de6f6a4ee0a7c76cacf1d87e0b&callback=?";
-				$.getJSON(url, geoOutput);
-		    }
-
-		    function onGeoError(error) {
-		    	if (error.code == 3){
-			        alert('code: '    + error.code    + '\n' +
-			              'message: ' + error.message + '\n' +
-			              'Please turn on your GPS.');
-			              parent.history.back();
-			    }
-		    }
+	    }
 	});
 
 	var geoOutput = function(info){
@@ -41,9 +38,6 @@ $('document').ready(function(){
 			$('#instagramOutput').append(pic);
 		});
 	};
-});
-
-$('document').ready(function(){
 
 	$('#nfl').on('click', function(){
 		$('#espnOutput').empty();
@@ -162,56 +156,49 @@ $('document').ready(function(){
 
 		});
 	};
-});
 
-$('#compassLink').on('click', function(){
+	$('#compassLink').on('click', function(){
 
-var watchID = null;
+	var watchID = null;
 
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    function onDeviceReady() {
-    }
-    $('#start').on('click', function(){
-	        var options = { frequency: 3000 };
-	        watchID = navigator.compass.watchHeading(onCompSuccess, onCompError, options);
-	        $('#compassMessage').html("Please wait...");
+	    $('#start').on('click', function(){
+		        var options = { frequency: 3000 };
+		        watchID = navigator.compass.watchHeading(onCompSuccess, onCompError, options);
+		        $('#compassMessage').html("Please wait...");
+		    });
+	    $('#stop').on('click', function(){
+	        if (watchID) {
+	            navigator.compass.clearWatch(watchID);
+	            watchID = null;
+	            $('#compassMessage').html("Press start for compass heading.");
+	        }
 	    });
-    $('#stop').on('click', function(){
-        if (watchID) {
-            navigator.compass.clearWatch(watchID);
-            watchID = null;
-            $('#compassMessage').html("Press start for compass heading.");
-        }
-    });
 
-    function onCompSuccess(heading) {
-        $('#compassMessage').html('Heading: ' + heading.magneticHeading);
-    }
-    function onCompError() {
-        alert('compError!');
-    }
-});
-$('#connection').on('click', function checkConnection() {
-        var checkConnections = navigator.network.connection.type;
-
-        var connType = {};
-        connType[Connection.UNKNOWN]  = 'Unknown connection';
-        connType[Connection.ETHERNET] = 'Ethernet connection';
-        connType[Connection.WIFI]     = 'WiFi connection';
-        connType[Connection.CELL_2G]  = 'Cell 2G connection';
-        connType[Connection.CELL_3G]  = 'Cell 3G connection';
-        connType[Connection.CELL_4G]  = 'Cell 4G connection';
-        connType[Connection.NONE]     = 'No network connection';
-
-        alert('Connection type: ' + connType[checkConnections]);
-});
-$('#accelerometer').on('click', function(){
-
-	document.addEventListener("deviceready", onDeviceReady, false);
-	function onDeviceReady() {
-	        navigator.accelerometer.getCurrentAcceleration(onAccelSuccess, onAccelError);
+	    function onCompSuccess(heading) {
+	        $('#compassMessage').html('Heading: ' + heading.magneticHeading);
 	    }
+	    function onCompError() {
+	        alert('compError!');
+	    }
+	});
+
+	$('#connection').on('click', function checkConnection() {
+	        var checkConnections = navigator.network.connection.type;
+
+	        var connType = {};
+	        connType[Connection.UNKNOWN]  = 'Unknown connection';
+	        connType[Connection.ETHERNET] = 'Ethernet connection';
+	        connType[Connection.WIFI]     = 'WiFi connection';
+	        connType[Connection.CELL_2G]  = 'Cell 2G connection';
+	        connType[Connection.CELL_3G]  = 'Cell 3G connection';
+	        connType[Connection.CELL_4G]  = 'Cell 4G connection';
+	        connType[Connection.NONE]     = 'No network connection';
+
+	        alert('Connection type: ' + connType[checkConnections]);
+	});
+
+	$('#accelerometer').on('click', function(){
+		navigator.accelerometer.getCurrentAcceleration(onAccelSuccess, onAccelError);
 
 	    function onAccelSuccess(accel) {
 	        alert('Acceleration X: ' + accel.x + '\n' +
@@ -223,21 +210,20 @@ $('#accelerometer').on('click', function(){
 	    function onAccelError() {
 	        alert('accelError!');
 	    }
-});
-
-$('#camera').on('click', function(){
-	navigator.camera.getPicture(onCameraSuccess, onCameraFail, { quality: 50,
-	    destinationType: Camera.DestinationType.DATA_URL, saveToPhotoAlbum: true
 	});
 
-	function onCameraSuccess(imageInfo) {
-	    var pic = document.getElementById('myImage');
-	    pic.src = "data:image/jpeg;base64," + imageInfo;
-	}
+	$('#camera').on('click', function(){
+		navigator.camera.getPicture(onCameraSuccess, onCameraFail, { quality: 50,
+		    destinationType: Camera.DestinationType.DATA_URL, saveToPhotoAlbum: true
+		});
 
-	function onCameraFail(msg) {
-	    alert('Failed because: ' + msg);
-	}
-});
-
+		function onCameraSuccess(imageInfo) {
+		    var pic = document.getElementById('myImage');
+		    pic.src = "data:image/jpeg;base64," + imageInfo;
+		}
+		function onCameraFail(msg) {
+		    alert('Failed because: ' + msg);
+		}
+	});
+};
 
